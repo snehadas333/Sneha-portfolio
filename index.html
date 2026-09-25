@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sneha Das | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container nav-inner">
+
+            <a href="#home" class="logo">
+                SNEHA<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    PERSONAL PORTFOLIO
+                </div>
+
+                <h1>
+                    Hi, I'm <span>Sneha</span>.<br></h1>
+                    <h2>I create. I code. 
+                </h2>
+
+                <p>
+                    A BCA student and aspiring software developer
+                    with a passion for web development.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#about" class="btn btn-primary">
+                        Explore My Work
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Let's Connect
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-label">
+                01 — ABOUT
+            </div>
+
+            <h2 class="section-title">
+                A little about me.
+            </h2>
+
+            <p class="about-text">
+                I'm Sneha, a BCA student interested in technology
+                and creative work. I enjoy building websites,
+                learning new programming concepts and turning ideas
+                into simple digital experiences.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Building responsive websites using HTML,
+                        CSS, JavaScript and exploring backend
+                        technologies.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Skills
+                    </h3>
+
+                    <p>
+                        C, JavaScript, Python, HTML, CSS, Java
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Projects
+                    </h3>
+
+                    <ul>
+                        <li>Python based network port scanner</li>
+                        <li>Game</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-label">
+                02 — SKILLS
+            </div>
+
+            <h2 class="section-title">
+                Things I work with.
+            </h2>
+
+            <div class="skills">
+
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">PHP</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">VS Code</span>
+                <span class="skill">Web Designing</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-label">
+                03 — CONTACT
+            </div>
+
+            <h2 class="section-title">
+                Let's create something.
+            </h2>
+
+            <div class="contact-box">
+
+                <p class="about-text">
+                    Have a project, collaboration or creative idea?
+                    Send me a message.
+                </p>
+
+                <form id="contactForm">
+
+                    <input type="text" id="name" placeholder="Your name" required>
+
+                    <input type="email" id="email" placeholder="Your email" required>
+
+                    <textarea id="message" placeholder="Your message" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
+
+                </form>
+
+                <p id="thankYouMessage"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container footer-inner">
+
+            <span>
+                © 2026 Sneha Das
+            </span>
+
+            <span>
+                Made with HTML & CSS
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const form = document.getElementById("contactForm");
+        const thankYouMessage = document.getElementById("thankYouMessage");
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+
+            if (name === "") {
+                return;
+            }
+
+            thankYouMessage.textContent =
+                "Thank you, " + name + "! We will reach out to you soon!";
+
+            thankYouMessage.style.color = "#ff6b2c";
+            thankYouMessage.style.fontSize = "18px";
+            thankYouMessage.style.fontWeight = "bold";
+            thankYouMessage.style.marginTop = "20px";
+
+            form.reset();
+
+        });
+
+    </script>
+</body>
+
+</html>
